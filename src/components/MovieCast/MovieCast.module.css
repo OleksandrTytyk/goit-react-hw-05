@@ -1,0 +1,25 @@
+.castContainer {
+}
+.castList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.castListItem {
+}
+.castImage {
+}
+
+.castActorContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 200px;
+}
+
+.actorName {
+  font-size: 20px;
+  font-weight: 500;
+}
+.characterName {
+}

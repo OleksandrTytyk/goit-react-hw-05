@@ -1,0 +1,57 @@
+.movieContainer {
+}
+.movieListItem {
+  display: flex;
+}
+.moviePoster {
+}
+.movieDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 5px;
+
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.movieTitle {
+  font-size: 48px;
+}
+.movieRating {
+}
+.movieGenres {
+}
+.movieOverview {
+}
+.productionCompaniesTitle {
+}
+.productionCompaniesList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 30px;
+}
+.productionCompany {
+}
+.companyLogo {
+}
+.movieHomepageLink {
+}
+.additionalInfo {
+}
+.additionalInfoTitle {
+}
+.additionalInfoList {
+  display: flex;
+  gap: 30px;
+}
+.additionalInfoItem {
+}
+.additionalInfoLink {
+}
+.additionalInfoRoute {
+}

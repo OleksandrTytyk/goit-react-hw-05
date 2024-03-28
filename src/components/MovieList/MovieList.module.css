@@ -1,0 +1,18 @@
+.movieListItems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  gap: 20px;
+}
+
+.movieListItem {
+  max-width: 480px;
+}
+
+.movieListInfo {
+  padding: 10px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
