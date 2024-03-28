@@ -1,0 +1,16 @@
+.navigationWrapper {
+  display: flex;
+  gap: 30px;
+  border: black solid 2px;
+  background-color: lightgrey;
+  padding: 10px 20px;
+}
+.navigationItem {
+  font-size: 20px;
+  font-weight: 500;
+
+  color: black;
+}
+.active {
+  color: orangered;
+}
