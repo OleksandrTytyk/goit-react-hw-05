@@ -1,10 +1,15 @@
 import { useState } from "react";
+import css from "./SearchForm.module.css";
 
 const SearchForm = ({ onSearch }) => {
   const [query, setQuery] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (!query.trim()) {
+      alert("Enter some text");
+      return;
+    }
     onSearch(query);
     setQuery("");
   };
@@ -14,7 +19,7 @@ const SearchForm = ({ onSearch }) => {
   };
 
   return (
-    <div>
+    <div className={css.searchFormWrapper}>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -22,8 +27,11 @@ const SearchForm = ({ onSearch }) => {
           value={query}
           onChange={handleChange}
           placeholder="Search movie..."
+          className={css.searchFormInput}
         />
-        <button type="submit">Search</button>
+        <button className={css.searchFormBtn} type="submit">
+          Search
+        </button>
       </form>
     </div>
   );

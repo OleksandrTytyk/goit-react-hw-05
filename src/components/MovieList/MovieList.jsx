@@ -1,15 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { imgUrl } from "../ApiService/ApiService";
 
 import css from "./MovieList.module.css";
 
 const MovieList = ({ movies }) => {
+  const location = useLocation();
   return (
     <div className={css.movieList}>
       <ul className={css.movieListItems}>
         {movies.map((movie) => (
           <li key={movie.id} className={css.movieListItem}>
-            <Link to={`/movies/${movie.id}`} className={css.movieListLink}>
+            <Link
+              state={location}
+              to={`/movies/${movie.id}`}
+              className={css.movieListLink}
+            >
               <img
                 src={imgUrl + movie.backdrop_path}
                 alt=""

@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { Link, Route, Routes, useParams } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { Link, Route, Routes, useLocation, useParams } from "react-router-dom";
 
 import {
   GetMovieDetails,
@@ -16,6 +16,8 @@ const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState([]);
   const [loading, setloading] = useState(false);
+  const location = useLocation();
+  const backLinkRef = useRef(location.state ?? "/");
 
   useEffect(() => {
     async function fetchMovie() {
@@ -37,6 +39,12 @@ const MovieDetailsPage = () => {
     <div className={css.movieContainer}>
       <li key={movie.id} className={css.movieListItem}>
         {loading && <Loader />}
+
+        <Link to={backLinkRef.current}>
+          <b>
+            <span>&#8592;</span>Go back
+          </b>
+        </Link>
 
         <img
           src={imgUrl + movie.poster_path}

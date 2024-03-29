@@ -15,10 +15,6 @@ const MoviesPage = () => {
   const query = searchParams.get("query");
 
   const onSearch = (value) => {
-    if (value === query) {
-      alert("Try someting new");
-      return;
-    }
     setMovies([]);
     setSearchParams({ query: value });
   };
@@ -29,6 +25,9 @@ const MoviesPage = () => {
     async function fetchMovie() {
       try {
         const { results } = await GetMovieByQuery(query);
+        if (results.length === 0) {
+          alert("Search failed, try again");
+        }
         setMovies(results);
       } catch (error) {
         console.log(error);

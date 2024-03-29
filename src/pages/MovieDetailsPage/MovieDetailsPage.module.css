@@ -1,10 +1,7 @@
-.movieContainer {
-}
 .movieListItem {
   display: flex;
 }
-.moviePoster {
-}
+
 .movieDetails {
   display: flex;
   flex-direction: column;
@@ -20,14 +17,7 @@
 .movieTitle {
   font-size: 48px;
 }
-.movieRating {
-}
-.movieGenres {
-}
-.movieOverview {
-}
-.productionCompaniesTitle {
-}
+
 .productionCompaniesList {
   display: flex;
   align-items: center;
@@ -35,23 +25,8 @@
 
   gap: 30px;
 }
-.productionCompany {
-}
-.companyLogo {
-}
-.movieHomepageLink {
-}
-.additionalInfo {
-}
-.additionalInfoTitle {
-}
+
 .additionalInfoList {
   display: flex;
   gap: 30px;
-}
-.additionalInfoItem {
-}
-.additionalInfoLink {
-}
-.additionalInfoRoute {
 }

@@ -1,0 +1,16 @@
+.searchFormInput {
+  padding: 10px 20px;
+  border-right: none;
+}
+.searchFormBtn {
+  padding: 10px 20px;
+  border-left: none;
+}
+
+.searchFormBtn:hover {
+  background-color: rgba(255, 68, 0, 0.459);
+}
+
+.searchFormWrapper {
+  margin-bottom: 20px;
+}
